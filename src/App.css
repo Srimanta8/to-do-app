@@ -1,38 +1,133 @@
-.App {
+body {
+  background-color: rgb(2, 87, 87);
+  color: aliceblue;
+  overflow: hidden;
+}
+
+h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo-wrapper {
+  background: rgb(7, 154, 173);
+  padding: 3%;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0px 5px 7px rgb(241, 233, 156);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.input {
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: flex;
+}
+.input-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 20px;
+}
+.input-item label{
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.input-item input{
+  padding: 8px;
+  border: none;
+  width: 250px;
 }
 
-.App-link {
-  color: #61dafb;
+.input-item input:focus{
+  outline: 2px solid rgb(241, 227, 22);
+}
+.btn{
+  background-color: orangered;
+  color: rgb(248, 248, 247);
+  border: none;
+  border-radius: 0px;
+  margin-top: 30px;
+  padding: 9px;
+  width: 80px;
+  cursor: pointer;
+}
+.btn:hover{
+  background-color: orange;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.secondaryBtn{
+  background-color: orangered;
+  color: rgb(248, 248, 247);
+  border: none;
+  border-radius: 0px;
+  margin-top: 30px;
+  padding: 9px;
+  width: 80px;
+  cursor: pointer;
+}
+.active{
+  background-color: orange;
+}
+
+.btn-area{
+  margin-bottom: 15px;
+}
+
+
+.todo-list{
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-list-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(17, 190, 196);
+  padding: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 2px 4px rgb(39, 38, 38);
+}
+
+.todo-list-item h3{
+  font-size: 25px;
+  color: rgb(3, 56, 31);
+  font-weight: bold;
+  margin: 0px;
+}
+
+.todo-list-item p{
+  margin-top: 8px;
+  font-size: 14px;
+  color: rgb(246, 248, 248);
+
+}
+
+.delete-icon{
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.delete-icon:hover{
+  color:orange;
+
+}
+
+.check-icon{
+  font-size: 22px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.check-icon:hover{
+  color:orangered;
 }
